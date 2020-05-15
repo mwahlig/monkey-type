@@ -136,5 +136,6 @@ function previewTheme(name) {
 function setTheme(name) {
     config.theme = name;
     $("#currentTheme").attr("href", `themes/${name}.css`);
+    hideCommandLine();
     firebase.analytics().logEvent('changedTheme', name);
 }
